@@ -15,20 +15,18 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-gallery.insertAdjacentHTML(
-  "afterbegin",
-  images
-    .map(
-      (image) => `
+const markup = images
+  .map(
+    (image) => `
   <li><img class="gallery__image" src="${image.url}" alt="${image.alt}" width="300px"></li>
   `
-    )
-    .join("")
-);
+  )
+  .join("");
+
+gallery.insertAdjacentHTML("afterbegin", markup);
 
 gallery.style.display = "flex";
 gallery.style.justifyContent = "space-between";
 gallery.style.listStyle = "none";
 gallery.style.alignItems = "center";
 
-console.log(gallery);
