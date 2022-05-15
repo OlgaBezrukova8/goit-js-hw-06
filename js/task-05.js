@@ -1,12 +1,12 @@
-const inputText = document.querySelector("input");
-const span = document.querySelector("span");
+const inputTextRef = document.querySelector("input");
+const spanRef = document.querySelector("span");
 
-inputText.addEventListener("input", onInputCheck);
+inputTextRef.addEventListener("input", onInputCheck);
 
 function onInputCheck(event) {
   if (event.currentTarget.value === "") {
-    span.textContent = "Anonymous";
+    spanRef.textContent = "Anonymous";
   } else {
-    span.textContent = event.currentTarget.value;
+    spanRef.textContent = event.currentTarget.value;
   }
 }

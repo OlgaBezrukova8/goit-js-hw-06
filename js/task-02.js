@@ -7,7 +7,7 @@ const ingredients = [
   "Condiments",
 ];
 
-const createItemCategoryOfIngredients = ingredients.map((el) => {
+const createItemOfIngredientsRef = ingredients.map((el) => {
   const item = document.createElement("li");
   item.classList.add("item");
   item.textContent = el;
@@ -16,4 +16,4 @@ const createItemCategoryOfIngredients = ingredients.map((el) => {
 });
 
 const listIngredients = document.querySelector("#ingredients");
-listIngredients.append(...createItemCategoryOfIngredients);
+listIngredients.append(...createItemOfIngredientsRef);

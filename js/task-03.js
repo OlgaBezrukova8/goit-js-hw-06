@@ -13,9 +13,9 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector(".gallery");
+const galleryRef = document.querySelector(".gallery");
 
-const markup = images
+const markupImg = images
   .map(
     (image) => `
   <li><img class="gallery__image" src="${image.url}" alt="${image.alt}" width="300px"></li>
@@ -23,10 +23,9 @@ const markup = images
   )
   .join("");
 
-gallery.insertAdjacentHTML("afterbegin", markup);
+galleryRef.insertAdjacentHTML("afterbegin", markupImg);
 
-gallery.style.display = "flex";
-gallery.style.justifyContent = "space-between";
-gallery.style.listStyle = "none";
-gallery.style.alignItems = "center";
-
+galleryRef.style.display = "flex";
+galleryRef.style.justifyContent = "space-between";
+galleryRef.style.listStyle = "none";
+galleryRef.style.alignItems = "center";

@@ -6,13 +6,13 @@ function getRandomHexColor() {
 
 // в задании в LMS была прописана функция в конце с .padStart(6, 0) - этот код добавила в начальный файл
 
-const buttonChangeColor = document.querySelector(".change-color");
-const body = document.querySelector("body");
-let colorText = document.querySelector(".color");
+const buttonChangeColorRef = document.querySelector(".change-color");
+const bodyRef = document.querySelector("body");
+let colorTextRef = document.querySelector(".color");
 
-buttonChangeColor.addEventListener("click", onChangeButtonClick);
+buttonChangeColorRef.addEventListener("click", onChangeButtonClick);
 
 function onChangeButtonClick(event) {
-  colorText.textContent = getRandomHexColor();
-  body.style.backgroundColor = colorText.textContent;
+  colorTextRef.textContent = getRandomHexColor();
+  bodyRef.style.backgroundColor = colorTextRef.textContent;
 }

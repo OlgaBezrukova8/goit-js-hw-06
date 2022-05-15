@@ -1,5 +1,5 @@
-const form = document.querySelector("form");
-form.addEventListener("submit", onButtonLoginSubmit);
+const formRef = document.querySelector("form");
+formRef.addEventListener("submit", onButtonLoginSubmit);
 
 function onButtonLoginSubmit(event) {
   event.preventDefault();
@@ -18,5 +18,5 @@ function onButtonLoginSubmit(event) {
   formInputs.forEach((el) => (obj[el.getAttribute("type")] = el.value));
   console.log(obj);
 
-  form.reset();
+  formRef.reset();
 }
