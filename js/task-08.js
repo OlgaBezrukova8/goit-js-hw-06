@@ -13,10 +13,10 @@ function onButtonLoginSubmit(event) {
 
   if (isValidForm) {
     alert("All fields must be completed!");
+  } else {
+    formInputs.forEach((el) => (obj[el.getAttribute("type")] = el.value));
+    console.log(obj);
+
+    formRef.reset();
   }
-
-  formInputs.forEach((el) => (obj[el.getAttribute("type")] = el.value));
-  console.log(obj);
-
-  formRef.reset();
 }

@@ -10,15 +10,20 @@ const boxesRef = document.querySelector("#boxes");
 createButtonRef.addEventListener("click", createBoxes);
 destroyButtonRef.addEventListener("click", destroyBoxes);
 
-function createBoxes(amount) {
-  amount = Number(amountInputRef.value);
+let lastDivHeight = 20;
+let lastDivWidth = 20;
 
-  for (let i = 0; i < amount; i += 1) {
-    let height = 30;
-    let width = 30;
+function createBoxes() {
+  let amount = Number(amountInputRef.value);
 
-    height += 10 * i;
-    width += 10 * i;
+  for (let i = 1; i < amount + 1; i += 1) {
+    let height = 10 * i + lastDivHeight;
+    let width = 10 * i + lastDivWidth;
+
+    if (i === amount) {
+      lastDivHeight = height;
+      lastDivWidth = width;
+    }
 
     const createDivRef = document.createElement("div");
     createDivRef.style.width = `${width}px`;
